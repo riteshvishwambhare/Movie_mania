@@ -18,8 +18,9 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
               <Route path='/movies' element={<Movies/>}/>
+              <Route path='/profile' element={<Profile />} />
                <Route path="/dashboard" element={<DashBoard/>} >
-            <Route path='profile' element={<Profile />} />
+                
         {/* <Route path='settings' element={<Settings />} /> */}
         </Route>
                 <Route path='*' element={<PageNotFound/>}/>

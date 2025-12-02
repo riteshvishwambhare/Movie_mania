@@ -21,16 +21,20 @@ const options = {
 try {
 	const response = await axios.request(options);
     setMovie(response.data)
+
+    localStorage.setItem("movies", JSON.stringify(response.data));
+
+
 } catch (error) {
     console.error(error);
 }
-
-
 };
 
 fetchMovie()
 }, [])
 console.log(movie);
+
+
 
   return (
     <div>
@@ -38,7 +42,7 @@ console.log(movie);
       
       <div className="grid grid-cols-3 gap-6 p-6 mx-40 mt-8 text-white ">
         {movie?.map((movie) => (
-          <div key={movie.id} className="shadow-md p-4 rounded border border-[#3C404C] shadow-xl hover:shadow-xl">
+          <div key={movie.id} className="h-full shadow-md p-4 rounded border border-[#3C404C] shadow-xl hover:shadow-xl ">
             
             <img 
              src={movie?.primaryImage}
@@ -53,6 +57,14 @@ console.log(movie);
             <p className="text-gray-400 text-sm mt-1">
               {movie.releaseDate}
             </p>
+
+            <button
+            onClick={()=> window.open(`https://www.imdb.com/title/tt27706593/${movie.id}/', "_blank"`)}
+            className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+            >
+            View on IMDB
+            </button>
+            
           </div>
         ))}
       </div>
