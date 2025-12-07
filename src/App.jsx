@@ -7,6 +7,7 @@ import DashBoard from './Pages/DashBoard'
 import PageNotFound from './Pages/PageNotFound'
 import { Profile } from './Pages/Profile'
 import Footer from './component/Footer'
+import Addmovie from './component/Addmovie'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,10 +21,13 @@ function App() {
               <Route path='/movies' element={<Movies/>}/>
               <Route path='/profile' element={<Profile />} />
                <Route path="/dashboard" element={<DashBoard/>} >
+              
                 
         {/* <Route path='settings' element={<Settings />} /> */}
         </Route>
                 <Route path='*' element={<PageNotFound/>}/>
+                 <Route path='/addMovie' element={<Addmovie/>}/>
+                 <Route path='/ViewMovie' element={<Movies/>}/>
           </Routes>
           </BrowserRouter>
 

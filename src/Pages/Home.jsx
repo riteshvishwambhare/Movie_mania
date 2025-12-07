@@ -10,6 +10,7 @@ const Home = () => {
       <Navbar/>
       <HeroSection/>
       <Footer/>
+     
     </div>
   )
 }
