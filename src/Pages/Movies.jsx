@@ -49,7 +49,8 @@ fetchMovies()
 }, [])
 
 const deleteMovie = (id) => {
-  const updatedMovies = movie.filter((movie) => movie.id !== id);
+  const store = JSON.parse(localStorage.getItem('movies')) || [];
+  const updatedMovies = store.filter((movie) => movie.id !== id);
   setMovie(updatedMovies);
   localStorage.setItem('movies', JSON.stringify(updatedMovies));
 
@@ -98,7 +99,7 @@ const deleteMovie = (id) => {
             >
               Delete
             </button>
-            
+
           </div>
         ))}
       </div>
