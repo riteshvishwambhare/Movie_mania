@@ -19,7 +19,7 @@ const fetchMovie = async () => {
 
 const options = {
   method: 'GET',
-  url: 'https://imdb-top-30-movies.p.rapidapi.com/',
+  url: 'https://moviesdatabase.p.rapidapi.com/titles/%7Bid%7D/main_actors',
   headers: {
     'x-rapidapi-key': '19458f3139msh34818f48e982faap1ce8bcjsne743a36408e2',
     'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
