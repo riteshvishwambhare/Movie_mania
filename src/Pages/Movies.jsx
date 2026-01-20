@@ -19,10 +19,10 @@ const fetchMovie = async () => {
 
 const options = {
   method: 'GET',
-  url: 'https://moviesdatabase.p.rapidapi.com/titles/%7Bid%7D/main_actors',
+  url: 'https://movies-ratings2.p.rapidapi.com/ratings?id=tt0111161',
   headers: {
-    'x-rapidapi-key': '19458f3139msh34818f48e982faap1ce8bcjsne743a36408e2',
-    'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
+   	'x-rapidapi-key': '19458f3139msh34818f48e982faap1ce8bcjsne743a36408e2',
+		'x-rapidapi-host': 'movies-ratings2.p.rapidapi.com'
   }
 };
 
