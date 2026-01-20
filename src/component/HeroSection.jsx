@@ -13,7 +13,7 @@ const HeroSection = () => {
                       text-center md:text-left"> 
 
         <h1 className="text-3xl md:text-5xl text-white font-bold">
-          This is Movie Mania Application
+          This is Movie Mania Application.
         </h1>
 
         <p className="text-lg md:text-2xl mt-2 text-white">
